@@ -1,0 +1,10 @@
+<tr id="author_row_<%= author.id %>">
+            <td><%= author.first_name %></td>
+            <td><%= author.last_name%></td>
+            
+            <td>
+                <%= link_to "Edit", edit_author_path(author), data: {bs_toggle: "modal", bs_target: "#editModal", remote: true}, class: "btn btn-success" %>
+                <%= link_to "Eliminar", author_path(author),  method: :delete, data: {confirm: "Are you sure?", remote: true}, class: "btn btn-danger" %>
+                <%= link_to "Ver Datos", author_path(author), data: {bs_toggle: "modal", bs_target: "#viewModal", remote: true}, class: "btn btn-info" %>
+            </td>    
+            </tr>

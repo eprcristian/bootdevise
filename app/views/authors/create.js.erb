@@ -1,0 +1,6 @@
+<% if @author.errors.any?  %>
+    $("#errors-area").html("<%=  escape_javascript render('errors', author: @author) %>")
+<% else %>
+$('#authorsTable').append("<%= escape_javascript render('author_row', author: @author) %>")
+$('#btn-close-new').click()
+<% end %>

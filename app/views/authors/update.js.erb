@@ -1,0 +1,6 @@
+<% if @author.errors.any?  %>
+    $("#errors-area").html("<%= escape_javascript render('errors', author: @author) %>")
+<% else%>
+    $("#author_row_<%= @author.id %>").replaceWith ("<%= escape_javascript render('author_row', author: @author) %>")
+    $('#btn-close-new').click()
+<% end %>
